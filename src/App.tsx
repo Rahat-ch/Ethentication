@@ -1,25 +1,13 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import * as React from 'react';
+import EthLogin from './lib/components/EthLogin';
 
 function App() {
+  const [currAccount, setCurrAcount] = React.useState("");
+  const [error, setError] = React.useState("");
+  console.log('from app', currAccount)
+  console.log('from app', error)
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <EthLogin message='Login with Eth' setAccount={setCurrAcount} setError={setError} />
   );
 }
 
