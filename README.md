@@ -4,19 +4,15 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 ### Using the Component
 
-//to be added
-
 Example Usage:
 
 ```js
 import * as React from "react";
-import EthLogin from "./lib/components/EthLogin";
+import EthLogin from "ethentication";
 
 function App() {
   const [currAccount, setCurrAcount] = React.useState("");
   const [error, setError] = React.useState("");
-  console.log("from app", currAccount);
-  console.log("from app", error);
   return (
     <EthLogin
       message="Login with Eth"
